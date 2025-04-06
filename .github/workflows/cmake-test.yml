@@ -34,13 +34,15 @@ jobs:
         include:
           - os: windows-latest
             triplet: x64-windows
+            
+    env:
+      VCPKG_DEFAULT_TRIPLET: ${{ matrix.triplet }}
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
         submodules: true
-
 
     - name: Use Developer Command Prompt (cmd)
       run: |
