@@ -38,6 +38,8 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
+      with:
+        submodule: true
 
 
     - name: Use Developer Command Prompt (cmd)
